@@ -181,7 +181,7 @@ public final class OJP: Sendable {
         let (data, response): (Data, URLResponse)
         do {
             (data, response) = try await loader(ojpXMLData)
-            debugPrint("--- Request ----")
+            /*debugPrint("--- Request ----")
             debugPrint(xmlString)
             if let _ = response as? HTTPURLResponse {
                 debugPrint("--- Response ----")
@@ -189,7 +189,7 @@ public final class OJP: Sendable {
                     debugPrint(xmlResponse)
                 }
                 debugPrint("---")
-            }
+            }*/
         } catch let error as URLError {
             throw OJPSDKError.loadingFailed(error)
         }
