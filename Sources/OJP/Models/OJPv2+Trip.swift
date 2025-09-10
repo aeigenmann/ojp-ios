@@ -79,7 +79,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__SituationsStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__SituationsStructure)
     struct Situation: Codable, Sendable {
         public let ptSituations: [PTSituation]?
         public let roadSituations: [RoadSituation]?
@@ -146,7 +146,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__InfoLinkStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__InfoLinkStructure)
     struct InfoLink: Codable, Sendable, Identifiable {
         public let url: URL
         /// if a `label` is present, display that instead of the url. It will contain a url escaped `<a>` tag.
@@ -168,7 +168,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__TextualContentStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__TextualContentStructure
     struct TextualContent: Codable, Sendable {
         public let summaryContent: SummaryContent
         public let reasonContent: ReasonContent?
@@ -212,7 +212,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__PublishingActionStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__PublishingActionStructure
     struct PublishingAction: Codable, Sendable {
         /// mandatory in schema, but currently optional here for backwards compatibilty. Will change in the future.
         public let publishAtScope: PublishAtScope?
@@ -234,7 +234,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#local_type_typedef_16_4
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#local_type_typedef_16_4
     enum ScopeType: String, Codable, Sendable, Equatable {
         case unknown
         case stopPlace
@@ -304,7 +304,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__AffectsScopeStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__AffectsScopeStructure
     struct Affects: Codable, Sendable {
         let stopPoints: [AffectedStopPoint]
 
@@ -313,7 +313,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__AffectedStopPointStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__AffectedStopPointStructure
     struct AffectedStopPoint: Codable, Sendable {
         let stopPointRef: String
 
@@ -443,7 +443,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__TripStatusGroup
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__TripStatusGroup
     /// - Note: OJP currently doesn't return `unplanned` or `delayed`
     struct TripStatus: Codable, Sendable {
 //        public var unplanned: Bool
@@ -476,7 +476,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TripStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TripStructure
     struct Trip: Codable, Identifiable, Sendable {
         /// Unique within trip response. This ID must not be used over mutliple ``OJPv2/TripRequest``
         /// - Warning: This ID must not be used over mutliple ``OJPv2/TripRequest``. Use ``tripHash`` instead.
@@ -567,7 +567,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegStructure
     struct Leg: Codable, Identifiable, Sendable {
         public let id: Int
         public let duration: Duration?
@@ -653,7 +653,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TransferTypeEnumeration
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TransferTypeEnumeration
     enum TransferType: String, Codable, Sendable {
         case walk
         case shuttle
@@ -700,7 +700,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TimedLegStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TimedLegStructure
     struct TimedLeg: Codable, Sendable {
         public let legBoard: LegBoard
         public let legsIntermediate: [LegIntermediate]
@@ -725,7 +725,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ServiceArrivalStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ServiceArrivalStructure
     struct ServiceArrival: Codable, Sendable, Hashable {
         public let timetabledTime: Date
         public let estimatedTime: Date?
@@ -735,13 +735,13 @@ public extension OJPv2 {
             case estimatedTime = "EstimatedTime"
         }
 
-        init(timetabledTime: Date, estimatedTime: Date? = nil) {
+        public init(timetabledTime: Date, estimatedTime: Date? = nil) {
             self.timetabledTime = timetabledTime
             self.estimatedTime = estimatedTime
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ServiceDepartureStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ServiceDepartureStructure
     struct ServiceDeparture: Codable, Sendable, Hashable {
         public let timetabledTime: Date
         public let estimatedTime: Date?
@@ -751,15 +751,15 @@ public extension OJPv2 {
             case estimatedTime = "EstimatedTime"
         }
 
-        init(timetabledTime: Date, estimatedTime: Date? = nil) {
+        public init(timetabledTime: Date, estimatedTime: Date? = nil) {
             self.timetabledTime = timetabledTime
             self.estimatedTime = estimatedTime
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegBoardStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegBoardStructure
     struct LegBoard: Codable, Sendable {
-        /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopPointGroup
+        /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopPointGroup
         public let stopPointRef: String
         public let stopPointName: InternationalText
         public let nameSuffix: InternationalText?
@@ -815,17 +815,17 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegIntermediateStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegIntermediateStructure)
     struct LegIntermediate: Codable, Sendable {
-        /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopPointGroup
+        /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopPointGroup)
         public let stopPointRef: String
         public let stopPointName: InternationalText
         public let nameSuffix: InternationalText?
         public let plannedQuay: InternationalText?
         public let estimatedQuay: InternationalText?
 
-        public let serviceArrival: ServiceArrival? // Set as optional until https://github.com/openTdataCH/ojp-sdk/issues/42 is fixed
-        public let serviceDeparture: ServiceDeparture? // Set as optional until https://github.com/openTdataCH/ojp-sdk/issues/42 is fixed
+        public let serviceArrival: ServiceArrival
+        public let serviceDeparture: ServiceDeparture
 
         public let stopCallStatus: StopCallStatus?
 
@@ -847,15 +847,26 @@ public extension OJPv2 {
             nameSuffix = try container.decode(InternationalText?.self, forKey: .nameSuffix)
             plannedQuay = try container.decode(InternationalText?.self, forKey: .plannedQuay)
             estimatedQuay = try container.decode(InternationalText?.self, forKey: .estimatedQuay)
-            serviceArrival = try container.decode(ServiceArrival?.self, forKey: .serviceArrival)
-            serviceDeparture = try container.decode(ServiceDeparture?.self, forKey: .serviceDeparture)
+            serviceArrival = try container.decode(ServiceArrival.self, forKey: .serviceArrival)
+            serviceDeparture = try container.decode(ServiceDeparture.self, forKey: .serviceDeparture)
             stopCallStatus = try StopCallStatus(from: decoder)
+        }
+
+        public init(stopPointRef: String, stopPointName: OJPv2.InternationalText, nameSuffix: OJPv2.InternationalText? = nil, plannedQuay: OJPv2.InternationalText? = nil, estimatedQuay: OJPv2.InternationalText? = nil, serviceArrival: OJPv2.ServiceArrival, serviceDeparture: OJPv2.ServiceDeparture, stopCallStatus: OJPv2.StopCallStatus? = nil) {
+            self.stopPointRef = stopPointRef
+            self.stopPointName = stopPointName
+            self.nameSuffix = nameSuffix
+            self.plannedQuay = plannedQuay
+            self.estimatedQuay = estimatedQuay
+            self.serviceArrival = serviceArrival
+            self.serviceDeparture = serviceDeparture
+            self.stopCallStatus = stopCallStatus
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegAlightStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegAlightStructure)
     struct LegAlight: Codable, Sendable {
-        /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopPointGroup
+        /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopPointGroup)
         public let stopPointRef: String
         public let stopPointName: InternationalText
         public let nameSuffix: InternationalText?
@@ -911,7 +922,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopCallStatusGroup
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__StopCallStatusGroup)
     struct StopCallStatus: Codable, Sendable, Hashable {
         public let order: Int?
         public let requestStop: Bool
@@ -919,6 +930,7 @@ public extension OJPv2 {
         public let notServicedStop: Bool
         public let noBoardingAtStop: Bool
         public let noAlightingAtStop: Bool
+        public let expectedDepartureOccupancy: [VehicleOccupancyStructure]
 
         enum CodingKeys: String, CodingKey {
             case order = "Order"
@@ -927,6 +939,7 @@ public extension OJPv2 {
             case notServicedStop = "NotServicedStop"
             case noBoardingAtStop = "NoBoardingAtStop"
             case noAlightingAtStop = "NoAlightingAtStop"
+            case expectedDepartureOccupancy = "siri:ExpectedDepartureOccupancy"
         }
 
         public init(from decoder: any Decoder) throws {
@@ -937,10 +950,50 @@ public extension OJPv2 {
             notServicedStop = try container.decodeIfPresent(Bool.self, forKey: .notServicedStop) ?? false
             noBoardingAtStop = try container.decodeIfPresent(Bool.self, forKey: .noBoardingAtStop) ?? false
             noAlightingAtStop = try container.decodeIfPresent(Bool.self, forKey: .noAlightingAtStop) ?? false
+            expectedDepartureOccupancy = try container.decodeIfPresent([VehicleOccupancyStructure].self, forKey: .expectedDepartureOccupancy) ?? []
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ProductCategoryStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__VehicleOccupancyStructure)
+    struct VehicleOccupancyStructure: Codable, Sendable, Hashable {
+        public let fareClass: FareClass?
+        public let occupancyLevel: OccupancyLevel?
+
+        enum CodingKeys: String, CodingKey {
+            case fareClass = "siri:FareClass"
+            case occupancyLevel = "siri:OccupancyLevel"
+        }
+    }
+
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__FareClassEnumeration)
+    enum FareClass: String, Codable, Sendable {
+        case unknown
+        case firstClass
+        case secondClass
+        case thirdClass
+        case preferente
+        case premiumClass
+        case businessClass
+        case standardClass
+        case turista
+        case economyClass
+        case any
+    }
+
+    // [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/siri.html#type_siri__OccupancyEnumeration)
+    enum OccupancyLevel: String, Codable, Sendable {
+        case unknown
+        case empty
+        case manySeatsAvailable
+        case fewSeatsAvailable
+        case standingRoomOnly
+        case crushedStandingRoomOnly
+        case full
+        case notAcceptingPassengers
+        case undefined
+    }
+
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ProductCategoryStructure)
     struct ProductCategory: Codable, Sendable {
         public let name: InternationalText?
         public let shortName: InternationalText?
@@ -953,12 +1006,12 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__GeneralAttributeStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__GeneralAttributeStructure)
     struct Attribute: Codable, Sendable {
         public let userText: InternationalText
         public let code: String
 
-        public enum CodingKeys: String, CodingKey {
+        enum CodingKeys: String, CodingKey {
             case userText = "UserText"
             case code = "Code"
         }
@@ -974,7 +1027,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__SituationRefList
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__SituationRefList)
     struct SituationFullRefs: Codable, Sendable {
         public let situationFullRefs: [SituationFullRef]
 
@@ -983,13 +1036,20 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__ServiceStatusGroup
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__ServiceStatusGroup)
     /// - WARNING: This is information currently not provided by OJP in Switzerland. See comment on [GitHub](https://github.com/openTdataCH/ojp-sdk/issues/41#issuecomment-2304431303)
     struct ServiceStatusGroup: Codable, Sendable {
         public let unplanned: Bool
         public let cancelled: Bool
         public let deviation: Bool
         public let undefinedDelay: Bool
+        
+        public init (unplanned: Bool = false, cancelled: Bool = false, deviation: Bool = false, undefinedDelay: Bool = false) {
+            self.unplanned = unplanned
+            self.cancelled = cancelled
+            self.deviation = deviation
+            self.undefinedDelay = undefinedDelay
+        }
 
         public enum CodingKeys: String, CodingKey {
             case unplanned = "Unplanned"
@@ -1007,9 +1067,9 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__DatedJourneyStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__DatedJourneyStructure)
     struct DatedJourney: Codable, Sendable {
-        /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ConventionalModesOfOperationEnumeration
+        /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ConventionalModesOfOperationEnumeration)
         public let conventionalModeOfOperation: ConventionalModesOfOperation?
 
         public let operatingDayRef: String
@@ -1136,7 +1196,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LinearShapeStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LinearShapeStructure)
     struct LinearShape: Codable, Sendable {
         // in XSD min 2 <GeoPosition> elements are required
         public let positions: [GeoPosition]
@@ -1164,7 +1224,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TrackSectionStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TrackSectionStructure)
     struct TrackSection: Codable, Sendable {
         public let trackSectionStart: PlaceRefChoice?
         public let trackSectionEnd: PlaceRefChoice?
@@ -1183,7 +1243,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegTrackStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__LegTrackStructure)
     struct LegTrack: Codable, Sendable {
         public let trackSections: [TrackSection]
 
@@ -1192,7 +1252,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ContinuousLegStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ContinuousLegStructure)
     struct ContinuousLeg: Codable, Sendable {
         public let legStart: PlaceRefChoice
         public let legEnd: PlaceRefChoice
@@ -1219,13 +1279,17 @@ public extension OJPv2 {
 
     struct PersonalService: Codable, Sendable {
         let personalMode: String
+        
+        public init(personalMode: String) {
+            self.personalMode = personalMode
+        }
 
         enum CodingKeys: String, CodingKey {
             case personalMode = "PersonalMode"
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ContinuousServiceStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ContinuousServiceStructure)
     enum ContinuousServiceTypeChoice: Codable, Sendable {
         case personalService(PersonalService)
         case datedJourney(DatedJourney)
@@ -1237,12 +1301,26 @@ public extension OJPv2 {
                 self = try .datedJourney(DatedJourney(from: decoder))
             }
         }
+
+        public func encode(to encoder: any Encoder) throws {
+            var svc = encoder.singleValueContainer()
+            switch self {
+            case let .personalService(personalService):
+                try svc.encode(personalService)
+            case let .datedJourney(datedJourney):
+                try svc.encode(datedJourney)
+            }
+        }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ContinuousServiceStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ContinuousServiceStructure)
     struct ContinuousService: Codable, Sendable {
         public let type: ContinuousServiceTypeChoice
         // TODO: add SituationFullRefs!
+
+        public enum CodingKeys: String, CodingKey {
+            case _0 = ""
+        }
 
         public init(from decoder: any Decoder) throws {
             type = try ContinuousServiceTypeChoice(from: decoder)
@@ -1250,6 +1328,11 @@ public extension OJPv2 {
 
         public init(type: ContinuousServiceTypeChoice) {
             self.type = type
+        }
+
+        public func encode(to encoder: any Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(type, forKey: ._0)
         }
     }
 
@@ -1342,7 +1425,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__PlaceRefGroup
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#group_ojp__PlaceRefGroup)
     enum PlaceRefChoice: Codable, Sendable {
         case stopPlaceRef(StopPlaceRef)
         case geoPosition(GeoPositionRef)
@@ -1405,7 +1488,7 @@ public extension OJPv2 {
         }
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ModeAndModeOfOperationFilterStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__ModeAndModeOfOperationFilterStructure)
     struct ModeAndModeOfOperationFilter: Codable, Sendable {
         public init(ptMode: [Mode.PtMode]?, exclude: Bool?) {
             self.ptMode = ptMode
@@ -1428,7 +1511,7 @@ public extension OJPv2 {
         case none
     }
 
-    /// https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TripParamStructure
+    /// [Schema documentation on vdvde.github.io](https://vdvde.github.io/OJP/develop/documentation-tables/ojp.html#type_ojp__TripParamStructure)
     struct TripParams: Codable, Sendable {
         public init(
             numberOfResults: NumberOfResults = .standard(10),
